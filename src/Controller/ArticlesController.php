@@ -39,7 +39,7 @@ class ArticlesController extends AppController {
                 $this->Flash->error('Article has NOT been saved. ');
             }
         // else not a post request
-       // $article->slug = $this->request->getData('title') . rand(); // make slug unique
+       $article->slug = $this->request->getData('title') . rand(); // make slug unique
         }
  
         $this->set('article', $article); 
